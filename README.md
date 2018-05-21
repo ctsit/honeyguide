@@ -7,14 +7,36 @@ data and redash as the front end.
 
 Make sure you have docker, docker-compose and an internet connection.
 
-Copy the `fake.env` file and rename it to `.env`.
+Copy the `fake.env` file and rename it to `.env`. See the following subsection for more information
 
 Fill in the correct info. If you decide to change the redash password then make sure to change it
 in the connection string as well.
 
 Run `docker-compose up --build`
 
+Run `./provision_redash_database.sh`
+
 Go to `localhost:8080` and log into redash!
+
+## ENV variables and what they do ##
+NOTE: spaces are underscores in the file
+
+|variable | explanation |
+|---------|-------------|
+|PG ADMIN DEFAULT PASS| default password for the pgadmin user|
+|PG ADMIN DEFAULT USER|default username for the pgadmin user|
+|PIP CAPPY CLONE URL|https url for the ctsit/cappy library|
+|PIP QUAIL CLONE URL|https url for the ctsit/QUAIL library |
+|PIP HAWKEYE CLONE URL|https url for the ctsit/hawkeye library|
+|POSTGRES PASSWORD| the password for the postgres user on the postgres database
+|QUAIL HOUR|the hour the quail cron job will run. changed at the image level
+|QUAIL MINUTE|the minute the quail cron job will run. also image level|
+|QUAIL REDCAP URL|the redcap url from which to pull data
+|QUAIL TOKEN|the token to use for the redcap project. cannot be a super user token|
+|REDASH COOKIE SECRET|some long random string|
+|REDASH DATABASE URL|how redash connects to the database. this will need to match the REDASH PASSWORD variable|
+|REDASH PASSWORD|the password for the redash database|
+
 
 # Adding a datasource #
 
@@ -40,3 +62,7 @@ docker so you will have to look this up on your own.
 
 There is a script that can be run from the docker host once the containers are running that will
 allow one to pull whenever they want.
+
+# Reporting #
+
+Hawkeye is installed on the system so once you set up the mail server you can respond to quail file creation

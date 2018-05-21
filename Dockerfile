@@ -3,6 +3,7 @@ FROM python:3-stretch
 
 ARG CAPPY_CLONE_URL
 ARG QUAIL_CLONE_URL
+ARG HAWKEYE_CLONE_URL
 ARG PGPASSWORD
 
 RUN apt-get update
@@ -15,9 +16,11 @@ RUN chown -R hcvprod /home/hcvprod
 
 RUN git clone $CAPPY_CLONE_URL
 RUN git clone $QUAIL_CLONE_URL
+RUN git clone $HAWKEYE_CLONE_URL
 
 RUN pip3 install -e ./cappy
 RUN pip3 install -e ./QUAIL
+RUN pip3 install -e ./hawk_eye_notify
 
 ENV TZ=America/New_York
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
