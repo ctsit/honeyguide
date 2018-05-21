@@ -1,0 +1,17 @@
+## [0.1.0] - 2018-05-21
+### Added
+ * Corrected file to reflect it was a Honeyguide authors' File. (Michael Buchholz)
+ * updates for issues encountered (Patrick White)
+ * Creation of an AUTHORS file. (Michael Buchholz)
+ * Create LICENSE (Christopher P. Barnes)
+ * makes environment variables propagate to cron job (Patrick White)
+ * Add latest database support and proper naming (Patrick White)
+ * add view free space script (Patrick White)
+ * cron working as intended now (Patrick White)
+ * running with cron now (Patrick White)
+ * fixing insecure image generation fixed redash using the postgres db (Patrick White)
+ * write readme, uncomment quail download commands (Patrick White)
+ * redash works on docker-compose up (Patrick White)
+ * quail running and working as intended, integrating redash now (Patrick White)
+ * connecting to postgres remotely and adding files (Patrick White)
+ * initial commit (Patrick White)
