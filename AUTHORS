@@ -1,8 +1,8 @@
 # Honeyguide Authors
 
 The RED-I Project would not be possible without the generous contributions of
-our authors and contributors. Pigeon is used to copy redcap records into a new
-redcap project instance.
+our authors and contributors. Honeyguide is a project meant to assist the HCV Target team with data analysis using QUAIL to pull
+data and Redash as the front end
 
 Patrick F. White (pfwhite9@gmail.com) Inventor
 Matthew J. McConnell (devmattm@gmail.com)
